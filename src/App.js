@@ -2,15 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import logo from './logo.svg';
-// import Card from './components/card';
+import Card from './components/card';
 import './App.css';
 
 function App() {
   const [pokes, setPokes] = useState([]);
   const [listePoke, setListePoke] = useState([]);
+  const [imgShiny, setImgShiny] = useState(null);
 
   useEffect(() => {
-    axios.get("https://pokeapi.co/api/v2/pokemon/?limit=25")
+    axios.get("https://pokeapi.co/api/v2/pokemon/?offset=151&limit=50")
     .then((res) => res.data)
     .then((data) => setListePoke(data.results))
   }, []);
@@ -27,15 +28,21 @@ function App() {
             
   }, [listePoke])
   return (
-    <ul>
-      {pokes?.map(item => (
-        <li>
-          <p>{item?.name}</p>
-          <img src={item?.sprites.front_default} alt={item?.name} />
+    <div class="containerVignetteDetails">
+      <div class="vignetteDetails listePoke">
+        <div class="vignetteTitle flex">
+          <h2>Liste Pokémons</h2>
+        </div>
+        <div class="vignetteRow">
 
-        </li>
-      ))}
-    </ul>
+          <div id="content">
+            {pokes?.map(item => (
+              <Card poke={item} shiny={ imgShiny !== null } fnc={setImgShiny} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 export default App;

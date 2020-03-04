@@ -1,0 +1,150 @@
+.vignette {
+    background-color: #f9f6f7;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px 0;
+    text-align: center;
+    min-width: 125px;
+
+
+}
+    .vignette img {
+        max-width: 100px;
+    }
+.vignette h4 {
+    line-height: 0;
+}
+
+    /* .vignette:hover {
+        background-color: #bf5454;
+        cursor: pointer;
+        user-select: none;
+        color: white;
+    } */
+
+.vignette button {
+    margin: 10px 0 0 0;
+}
+
+.vignette a {
+    text-decoration: none;
+    color: #333333;
+}
+.vignette a:hover {
+    color: white;
+}
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    /*justify-content: center;*/
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.noEvent {
+    pointer-events: none;
+}
+
+.vignetteAhref {
+    display: block;
+    text-decoration: none;
+}
+
+.right {
+    float: right;
+}
+    .right img {
+        width: 50px;
+    }
+
+.vignetteType {
+    background-color: #f9f6f7;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    /*max-width: 150px;*/
+}
+
+
+
+/* nouvel section css */
+
+.vignetteDetails {
+    background-color: #f9f6f7;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+    text-align: left;
+}
+.vignetteDetails h4{
+    /* width: 150px; */
+    margin-bottom: 15px;
+    line-height: 0;
+}
+
+.vignetteTitle {
+    justify-content: space-evenly;
+    border-radius: 5px;
+    background-color: #bf5454;
+    color: white;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+    .vignetteTitle h2 {
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    .vignetteTitle img {
+        margin-top: 8px;
+    }
+.vignetteRow {
+    /* padding: 15px 20px; */
+    text-align: left;
+}
+
+.stats {
+    width: 250px;
+    margin-left: 50px;
+}
+
+.filter {
+    width: 250px;
+    margin-left: 50px;
+    height: 600px;
+}
+
+.listePoke {
+    min-width: 300px;
+}
+
+.login{
+    min-width: 400px;
+}
+
+.vignetteRowStat {
+    text-align: left;
+    padding: 5px 15%;
+}
+
+.vignetteRowType {
+    text-align: left;
+    padding: 3px 15%;
+}
+
+.flex {
+    display: flex;
+}
+.flex img {
+    padding-left: 1em;
+}
+
+.containerVignetteDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
