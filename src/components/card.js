@@ -14,6 +14,9 @@ function Card({poke, shiny, fnc}){
             <div>
                 <span>{poke?.id}</span>
                 <h4>{upperFirstLetter(poke.name)}</h4>
+                {poke.abilities.map((s)=>(
+                    <p style={{color: s.is_hidden ? "#bf5454" : "#333"}}>{s.ability.name}</p>
+                ))}
             </div>
         </div>
     );
