@@ -1,0 +1,16 @@
+.pagination {
+    display: inline-block;
+    margin: 22px 0;
+}
+  
+.pagination button {
+    margin-right:5px;
+    border-radius: 10%;
+    border: none;
+    float: left;
+    padding: 5px 10px;
+}
+.activePagi{
+    color: white;
+    background-color: #bf5454;
+}

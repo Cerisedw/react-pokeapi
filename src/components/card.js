@@ -9,7 +9,7 @@ function Card({poke, shiny, fnc}){
     return(
         <div class="vignette">
             <div>
-                <img src={shiny ? poke?.sprites.front_shiny : poke?.sprites.front_default } alt={poke?.name} onClick={ () => shiny ? fnc(null) : fnc(!shiny) } />
+                <img src={(shiny ? poke?.sprites.front_shiny : poke?.sprites.front_default) ?? "https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png" } alt={poke?.name} onClick={ () => shiny ? fnc(null) : fnc(!shiny) } />
             </div>
             <div>
                 <span>{poke?.id}</span>
