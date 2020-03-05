@@ -17,13 +17,13 @@ function App() {
       if(pagination<0) setPagination(0);
       if(pagination>32) setPagination(32);
       const offset = 25 * pagination;
-      axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=25`)
+      axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}`)
       .then((res) => res.data)
       .then((data) => setListePoke(data.results))
   }, [pagination]);
 
   useEffect(() => {
-    axios.get("https://pokeapi.co/api/v2/pokemon/?limit=25")
+    axios.get("https://pokeapi.co/api/v2/pokemon/")
     .then((res) => res.data)
     .then((data) => setListePoke(data.results))
   }, []);
